@@ -1,7 +1,9 @@
-const Hello = () => {
+import "./App.css";
+
+const Hello = (props) => {
   return (
     <div>
-      <p>Hello world</p>
+      <p>Hello world, {props.name}, {props.age}</p>
     </div>
   )
 }
@@ -12,10 +14,11 @@ const App = () => {
   const b = 20
   console.log(now, a+b)
   return (
-  <div>
-    <p>Hello world, it is {now.toString()}</p>
-    <p>{a} plus {b} is {a+b}</p>
-    <Hello />
+  <div className="App-header">
+    <header>
+      <h1>Reactin alkeet</h1>
+    </header>
+    <Hello name="Anna" age={b}/>
   </div>
 )
 }
